@@ -3,6 +3,8 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.5'
+gem 'bootstrap-sass'
+gem 'sprockets', '2.11'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
@@ -21,6 +23,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'therubyracer'
 gem 'mysql2'
+
 
 
 group :doc do
