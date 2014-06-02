@@ -23,11 +23,11 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: sample_app_test
+  database: sample_app
   pool: 5
-  username: root
-  password:
-  host: localhost
+  username: sample_app 
+  password: sample_app
+  host: 127.0.0.1
 
 production:
   adapter: mysql2
