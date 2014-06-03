@@ -2836,3 +2836,1913 @@ Processing by UsersController#new as HTML
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:53:58', 'user@example.com', 'Example User', '$2a$04$a1oiBFVvFL0u6TywILTKuuMeNsv.cg9SmILqoumkgoXH9PntntV3m', '2014-06-03 16:53:58')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (12.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:53:58', 'user@example.com', 'Example User', '$2a$04$F6glUB7.W9al3DLvM.0UmOft4ycixY3b3DstINM7FKJ2DFsKPi7Xq', '2014-06-03 16:53:58')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:53:58', 'user@example.com', 'Example User', '$2a$04$IXlEp5CMTBxLnHeD48f1A.bwOhfkew9f7FHu8upfKJcOM/uPa1VBm', '2014-06-03 16:53:58')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:53:58', 'user@example.com', 'Example User', '$2a$04$WNkVkiudJX9LvN9r9osIa.KmpVG46jA6nvilc3K5Aqodpe.zMNDYG', '2014-06-03 16:53:58')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 16:53:58 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.5ms)
+Warning. Error encountered while saving cache 918174e69e3ff929c6270491cb8407fc5bbcaa79/custom.css.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache c6aa45650795d6736884efb49abca6fb7b1c08fc/bootstrap.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/bootstrap.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_variables.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_mixins.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_reset.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_scaffolding.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_grid.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_layouts.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_type.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_code.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_forms.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tables.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_sprites.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_dropdowns.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_wells.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_component-animations.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_close.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_buttons.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_button-groups.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_alerts.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navs.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navbar.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pagination.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pager.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_modals.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tooltip.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_popovers.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_thumbnails.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_media.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_labels-badges.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_progress-bars.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_accordion.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_carousel.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_hero-unit.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_utilities.scssc: can't dump anonymous class #<Class:0x00000003f1bc58>
+
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 4090ms (Views: 4089.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:54:02', 'michael@example.com', 'Michael Hartl', '$2a$04$xr8z9l1HTIx6t0escveuQeK2IblLnw8SUvVWNHA6M9vAn2AKzLGRK', '2014-06-03 16:54:02')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/12" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (5.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:54:02', 'michael@example.com', 'Michael Hartl', '$2a$04$s44jGiOXuZNXedZdBiIyQ.JokPVvQ9D0uDRltUSc5KJuN6if9zOJ.', '2014-06-03 16:54:02')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/13" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 16:54:02 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 16:55:11 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 83ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 16:55:11 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:55:11', 'michael@example.com', 'Michael Hartl', '$2a$04$zvKlm5UFtzp1hpyYInhSAO8QnF9uNFJSLONRDXdBETbPLtblqnIdK', '2014-06-03 16:55:11')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/14" for 127.0.0.1 at 2014-06-03 16:55:11 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 14 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (11.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:55:11', 'michael@example.com', 'Michael Hartl', '$2a$04$grMzyQ5kHc6Ci7xD4NPwheKh/g8UF7GxI0ZJBC1QQtC5NtMfrffHq', '2014-06-03 16:55:11')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/15" for 127.0.0.1 at 2014-06-03 16:55:11 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (4.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:55:12 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:55:12', 'user@example.com', 'Example User', '$2a$04$FJaE42h2ZqFKVSSyzsfpieTEDlhBCcA5kkpPNGUF6FmTCJ.lILeAa', '2014-06-03 16:55:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (4.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:55:12', 'user@example.com', 'Example User', '$2a$04$qQcBUJjE/U7XxfMTIFyRZe7omaUC/gLjLcvgDqkZgyL7RHux68YR.', '2014-06-03 16:55:12')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:55:12', 'user@example.com', 'Example User', '$2a$04$lpBTDo.tHqvMzbi9LuMf6uVsgjRPo/C48etmEm16XTmKvT3cw2OoW', '2014-06-03 16:55:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (3.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:55:12', 'user@example.com', 'Example User', '$2a$04$0dfbOek5pViMpq6YaenACuAhG0j/Ai38T0Hm50Tf0S0QZ7WoeZmya', '2014-06-03 16:55:12')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:59:47', 'user@example.com', 'Example User', '$2a$04$4CzAQEZiKuLXY/rg1NeEmuiSUZBcXn7enGD649LNQGtm.wET44GDi', '2014-06-03 16:59:47')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (3.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:59:47', 'user@example.com', 'Example User', '$2a$04$gbuR54RM2Wf15jbdMjpZO.srlIkAxieuUH8EzmzavffTtwerbB.8O', '2014-06-03 16:59:47')[0m
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:59:47', 'user@example.com', 'Example User', '$2a$04$hMze6yGQ5ppx/SqOlp7DgOXvGjCECkUIhuYw/wV.01KSEQXN0mnQS', '2014-06-03 16:59:47')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (2.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:59:47', 'user@example.com', 'Example User', '$2a$04$tJWepP36seQ4adZ1ugmWDOhz07/iMNfhqyYPu9H5VI1uwb5MmvRga', '2014-06-03 16:59:47')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:59:47', 'michael@example.com', 'Michael Hartl', '$2a$04$kG5QzQH3eXQLc4xjBQo9uOCpkF6/HMUyYWVA20Kx3mTQjr/714rXK', '2014-06-03 16:59:47')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/24" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 24 LIMIT 1[0m
+Completed 500 Internal Server Error in 18ms
+  [1m[35m (5.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 16:59:47', 'michael@example.com', 'Michael Hartl', '$2a$04$IlsEhb4d13SONx4bIKflZeOgzpAelHkcWkPb3qedwJBOo1g1IBhMe', '2014-06-03 16:59:47')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/25" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1
+Completed 500 Internal Server Error in 15ms
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 16:59:47 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:02:36', 'user@example.com', 'Example User', '$2a$04$IwYRSLU97fd/dr7Cw.Y2vOKngcxg7cCjJXG4r9RqlG0tV5meOW1d6', '2014-06-03 17:02:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (6.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:02:36', 'user@example.com', 'Example User', '$2a$04$RuQSZS19PVsRSAif0dyH1.pMyw31JNBSvo354YCcuMGH2L0ybNoV.', '2014-06-03 17:02:36')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (12.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:02:36', 'user@example.com', 'Example User', '$2a$04$ibzc0ogbSkW9X2zA5QE8J.Xo1zn8iS3MiOakAHoK2eFM2FeuyWiPG', '2014-06-03 17:02:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:02:36', 'user@example.com', 'Example User', '$2a$04$CurPGT6e/BtPvThMMOxpo.Jbf0gJ.IFJIVM4UseurBWV5nIOD6q2S', '2014-06-03 17:02:36')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (50.7ms)
+Completed 200 OK in 55ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:02:36', 'michael@example.com', 'Michael Hartl', '$2a$04$vWIa2z8NCefWA7kj7jcdwet2n1x2hT.F07FZia2xCwJK2Ish2guG.', '2014-06-03 17:02:36')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/30" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 30 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (6.6ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:02:36', 'michael@example.com', 'Michael Hartl', '$2a$04$2eYK/S9/okvTwhxYIKTBB.p..AHzXdkwJB7oo7LxszYHeh/HSrdna', '2014-06-03 17:02:36')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/31" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 31 LIMIT 1
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:02:36 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:17:18', 'user@example.com', 'Example User', '$2a$04$.fLYqqWBijb64A5OkOkET..FVjP9zMEfwr/dkJUZI6kOyc.Qb7zZC', '2014-06-03 17:17:18')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (13.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:17:18', 'user@example.com', 'Example User', '$2a$04$2kRTJvZzXHTx21YJExz7JuqLP6606Zb1YVTF5.faslVahol9qWBui', '2014-06-03 17:17:18')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:17:18', 'user@example.com', 'Example User', '$2a$04$JENpA/sCxaO62s.l8aLteO.5XlQFE3b8PLtcjFYIfkDJPazVOcQaO', '2014-06-03 17:17:18')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:17:18', 'user@example.com', 'Example User', '$2a$04$sG6M6ct/EVq.6k4HAi4Waua0W0mcD9.HLFHMZd9jVxruGIczxaK6O', '2014-06-03 17:17:18')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 17:17:18 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+Warning. Error encountered while saving cache 918174e69e3ff929c6270491cb8407fc5bbcaa79/custom.css.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache c6aa45650795d6736884efb49abca6fb7b1c08fc/bootstrap.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/bootstrap.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_variables.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_mixins.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_reset.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_scaffolding.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_grid.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_layouts.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_type.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_code.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_forms.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tables.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_sprites.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_dropdowns.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_wells.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_component-animations.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_close.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_buttons.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_button-groups.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_alerts.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navs.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navbar.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pagination.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pager.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_modals.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tooltip.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_popovers.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_thumbnails.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_media.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_labels-badges.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_progress-bars.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_accordion.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_carousel.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_hero-unit.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_utilities.scssc: can't dump anonymous class #<Class:0x000000058a7c30>
+
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 3848ms (Views: 3846.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:17:22', 'michael@example.com', 'Michael Hartl', '$2a$04$rgP9LDXUL/2sebzM98lKle8WnLaXrFM9xlX0bvFKNhDA536AWYHyq', '2014-06-03 17:17:22')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/5" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (4.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 17:17:22', 'michael@example.com', 'Michael Hartl', '$2a$04$Ec4ZTLOd5Gqwcy2JF5aruutCtPiCan4/Qw3tBVPz7u.OUf4Eb0nDW', '2014-06-03 17:17:22')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/6" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:17:22 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:21:34 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 11ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:21:34 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:21:34 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:21:34 +0000
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:24:00 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 127ms (Views: 112.0ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:24:00 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:24:00 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:24:00 +0000
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:52:08 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (22.3ms)
+Warning. Error encountered while saving cache 918174e69e3ff929c6270491cb8407fc5bbcaa79/custom.css.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache c6aa45650795d6736884efb49abca6fb7b1c08fc/bootstrap.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/bootstrap.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_variables.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_mixins.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_reset.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_scaffolding.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_grid.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_layouts.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_type.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_code.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_forms.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tables.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_sprites.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_dropdowns.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_wells.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_component-animations.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_close.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_buttons.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_button-groups.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_alerts.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navs.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navbar.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pagination.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pager.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_modals.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tooltip.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_popovers.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_thumbnails.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_media.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_labels-badges.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_progress-bars.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_accordion.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_carousel.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_hero-unit.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_utilities.scssc: can't dump anonymous class #<Class:0x0000000545bc58>
+
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 4020ms (Views: 4006.1ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Started POST "/users" for 127.0.0.1 at 2014-06-03 17:52:12 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 17:52:58 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 124ms (Views: 108.8ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Started POST "/users" for 127.0.0.1 at 2014-06-03 17:52:58 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 7.2ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:02:26 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (25.9ms)
+Warning. Error encountered while saving cache 918174e69e3ff929c6270491cb8407fc5bbcaa79/custom.css.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache c6aa45650795d6736884efb49abca6fb7b1c08fc/bootstrap.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/bootstrap.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_variables.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_mixins.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_reset.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_scaffolding.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_grid.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_layouts.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_type.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_code.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_forms.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tables.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_sprites.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_dropdowns.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_wells.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_component-animations.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_close.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_buttons.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_button-groups.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_alerts.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navs.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_navbar.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pagination.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_pager.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_modals.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_tooltip.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_popovers.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_thumbnails.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_media.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_labels-badges.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_progress-bars.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_accordion.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_carousel.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_hero-unit.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+Warning. Error encountered while saving cache 0ed029a4fdb36e3fcb178d79bc97a61908c0d308/_utilities.scssc: can't dump anonymous class #<Class:0x00000003ff7c58>
+
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 4932ms (Views: 4916.9ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Started POST "/users" for 127.0.0.1 at 2014-06-03 18:02:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_error_messages.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:30', 'user@example.com', 'Example User', '$2a$04$cC1yucmFRuZjbK6myvmsVOx0TjJPUM8IyUy6sg6zfFnIWLlxVInUS', '2014-06-03 18:07:30')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:30', 'user@example.com', 'Example User', '$2a$04$ZibnjNm47UOwsGrFsyQjSuJ90RDIjL1VNoUqcKFWAmkBNpygkBz9e', '2014-06-03 18:07:30')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:30', 'user@example.com', 'Example User', '$2a$04$zn9mx2/6ZbzQZKsAyRc.0uZQBD5ZaytT7HeA1.v/pCOdZHDq8OJR.', '2014-06-03 18:07:30')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (2.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:30', 'user@example.com', 'Example User', '$2a$04$lNjr.F/v/3Q8JbLPNNVQNeb/7puFirt7gp7Ip2EcMPeVws4Qs3qg6', '2014-06-03 18:07:30')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:30', 'michael@example.com', 'Michael Hartl', '$2a$04$xZFBdZYaRKnMtSy84bmqMej3ehmKeYZVypWB0sT3O1H17j4leblQO', '2014-06-03 18:07:30')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/12" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 12 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (5.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:30', 'michael@example.com', 'Michael Hartl', '$2a$04$KgpUmsOiS1xBxgfe7qoHY.YHBlb7BoH9mFRWECBDilMTk8uULBPg2', '2014-06-03 18:07:30')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/13" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 13 LIMIT 1
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Started POST "/users" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_error_messages.html.erb (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 10.7ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:07:30 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+Started POST "/users" for 127.0.0.1 at 2014-06-03 18:07:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Example User", "email"=>"user@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:07:31', 'user@example.com', 'Example User', '$2a$04$h3GMT4IOca8jcEBXo1rfletAXA2dfNlTL1tOgIDm92h3LxifkQNMC', '2014-06-03 18:07:31')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 8ms
+  [1m[36m (5.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = ' ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'USER@EXAMPLE.COM' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:43', 'user@example.com', 'Example User', '$2a$04$rIoDESCzNp5LWAn9A1LdUeCjeHxcSGSlzq.eSXP3dzgzOOmp7yi0u', '2014-06-03 18:10:43')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (10.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:43', 'user@example.com', 'Example User', '$2a$04$h4m41M3e8ctx0FOUWAAo0.QSkipzOeZCSvL8qI7LwaTVZkv.xwYhC', '2014-06-03 18:10:43')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:43', 'user@example.com', 'Example User', '$2a$04$N73IgfL6P0a17qB8rZ5YU.ca/39DmJOWcfJEtSV0a1mkMZ5eAkIA6', '2014-06-03 18:10:43')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:43', 'user@example.com', 'Example User', '$2a$04$jJGtmCHxT150C8AWs/rye.U1QZDGbrLLxLp1KBw8D.B.TzUObeF0.', '2014-06-03 18:10:43')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo.COM' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'A_US-ER@f.b.org' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'frst.lst@foo.jp' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'a+b@baz.cn' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'example.user@foo.' LIMIT 1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar_baz.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'foo@bar+baz.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/about" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/contact" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/help" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by StaticPagesController#help as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:44', 'michael@example.com', 'Michael Hartl', '$2a$04$QlyVCfLkJjXXdozw.jZH1.Daki.k96D7qCciE2rXHR1CAnS7dIZVS', '2014-06-03 18:10:44')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/19" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (4.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'michael@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:44', 'michael@example.com', 'Michael Hartl', '$2a$04$jVKRPPzyPTUas0b41yOUmes0zVxxIQDvzR03kGRoyFSUpv64J3kBK', '2014-06-03 18:10:44')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/20" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Started POST "/users" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_error_messages.html.erb (3.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+Started POST "/users" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"Example User", "email"=>"user@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2014-06-03 18:10:44', 'user@example.com', 'Example User', '$2a$04$NjNnGejA6/lUY2t8lMaAt.AR0ie8N3xUoUwfYgrmWFAqQ6H85KKNG', '2014-06-03 18:10:44')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/21
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/users/21" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36m (6.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-06-03 18:10:44 +0000
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
