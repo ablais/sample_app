@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @count = User.count
+    @usernum = @user["id"]
   end
   def new
     @user = User.new
