@@ -6,6 +6,7 @@ gem 'rails', '4.0.5'
 gem 'bootstrap-sass'
 gem 'sprockets', '2.11'
 gem 'bcrypt-ruby', '3.1.2'
+gem "paperclip", "~> 4.1"
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

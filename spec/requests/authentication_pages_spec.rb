@@ -25,6 +25,16 @@ describe "AuthenticationPages" do
         it { should_not have_selector('div.alert.alert-error') }
       end
     end
+    describe "with inactive user" do
+      let(:user) { FactoryGirl.create(:user, :active => false) }
+      before do
+        fill_in "Email",    with: user.email.upcase
+        fill_in "Password", with: user.password
+        click_button "Sign in"
+      end
+      it { should have_selector('div.alert.alert-error') }
+      it { should have_content('User is not Active') }
+    end
     describe "with valid information" do
       let(:user) { FactoryGirl.create(:user) }
       before do

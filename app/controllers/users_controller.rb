@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @count_active = User.active_count.count
     @count = User.count
     @usernum = @user["id"]
   end
@@ -15,13 +16,23 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
+  def avatar
+    @user = User.find(params[:id])
+  end
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
-      redirect_to @user
+    @user.assign_attributes(user_params)
+    if @user.changed?
+      if @user.update_attributes(user_params)
+        flash[:success] = "Profile updated"
+        redirect_to @user
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      flash[:error] = "Error: No Changes Made"
+    #  render 'edit'
+      redirect_to :back
     end
   end
   def create
@@ -38,13 +49,10 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :avatar)
     end
-  private
-
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+    def user_params2
+      params.require(:user).permit(:avatar)
     end
 
     # Before filters

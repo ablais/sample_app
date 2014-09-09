@@ -3,9 +3,13 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
+        <!--<%= gravatar_for @user %>-->
+        <%= image_tag @user.avatar.url(:thumb)  %>
         <%= @user.name %>
-        <br>You are user <%= @usernum %> out of <%= @count %>
+        <br>
+	<br>
+        <br><%= @count_active %> active users in the system
+        <br>You are user <%= @usernum %> out of <%= @count %> total users
       </h1>
     </section>
   </aside>

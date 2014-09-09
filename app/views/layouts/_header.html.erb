@@ -20,6 +20,9 @@
                   <%= link_to "Sign out", signout_path, method: "delete" %>
                 </li>
               </ul>
+                <li>
+                  <%= image_tag @user.avatar.url(:header)  %>
+                </li>
             </li>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>

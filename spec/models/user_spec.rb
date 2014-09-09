@@ -14,8 +14,19 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:active) }
 
   it { should be_valid }
+  it { should be_active }
+
+  describe "with active attribute set to 'false'" do
+    before do
+      @user.save!
+      @user.toggle!(:active)
+    end
+   
+    it {  should_not be_active }
+  end
 
   describe "when name is not present" do
     before { @user.name = " " }
